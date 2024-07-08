@@ -1,0 +1,38 @@
+#tswcssbuttons {
+  width: 180px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#tswcssbuttons ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: outside none none;
+}
+
+#tswcssbuttons li {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  list-style: outside none none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#tswcssbuttons li a {
+  color: black;
+  background-color: #525dff;
+  border: 1px outset #addbc8;
+  text-decoration: none;
+  display: block;
+}
+
+#tswcssbuttons li a:hover {
+  color: #b8bcff;
+  background-color: #525dff;
+}
+
+#logo {
+  display: block;
+  margin: auto;
+}
+

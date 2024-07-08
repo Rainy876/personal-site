@@ -1,0 +1,42 @@
+Notes: 
+
+terminal git bash 
+
+CMDS:
+
+pwd (print working directory) shows where you are in pc
+
+ls (-a) <-- flag   (shows everything where your in)
+	blue=folder
+
+cd (folder) use after mkdir
+	start typing and pressing tab auto completes while pressing twice shows all avalible options
+	/z to go into z drive as long as ones there
+
+cd (..)
+
+mkdir (folder-name)
+
+touch (file.txt) (makes file)
+
+which (command)
+
+nano (file.txt)
+
+cat (shows text in file) 
+
+mv (moves stuff, renames, changes file type)   ex move: mv moveme.txt myproject ex name: mv moveme.txt newname.txt
+	
+ nano cmd: <a href="./myproject">LINK! Click here!</a>
+   one for go back in a nano file 
+
+
+
+
+
+/ USES:
+
+~/ :user folder (aka /c/user/username)
+/  :root
+./ :current directory
+../ :enclosing directory
