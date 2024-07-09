@@ -1,0 +1,41 @@
+body {
+    background-color: bisque;
+}
+
+#mybox {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: mediumpurple;
+    outline: 3px groove dimgray;
+    outline-style: groove;
+    margin: 5px 5px 10px 15px;
+}
+
+#robot {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    /*background-color: chocolate; */
+    outline: 1px solid black;
+   /* right: 50%;
+    top: 50%; */
+    animation-name: robot-dance;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes robot-dance {
+    0%, 100% {
+        background-color:chocolate;
+        left: 10%;
+        top: 50%;
+    }
+    25% {
+        top: 25%;
+    }
+    50% {
+        background-color: darkolivegreen;
+        left: 80%;
+    }
+}
