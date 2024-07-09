@@ -55,3 +55,9 @@ div#tswfooter {
 	color: #000 ;
 	background-color: burlywood ;
 }
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
