@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Visit our zoo</h1>
+<h2>Our zoo is better than others</h2>
+
+<p title="Suprise">You can find our zoo's page here: <a href="https://zoo.sandiegozoo.org/plan-your-visit?gad_source=1&gclid=EAIaIQobChMI2LnelImahwMVGl5HAR1m3gfGEAAYASAAEgKT2vD_BwE">Visit the San Diego Zoo</a></p>
+<img src="https://zoo.sandiegozoo.org/sites/default/files/body_side_image/visit-koala.jpg" width=600 height=500>
+<p> This koala will be sad if you don't visit. </p>
+
+</body>
+</html>
+
