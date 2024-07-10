@@ -7,9 +7,10 @@ body {
 	background-color: burlywood;
 }
 img {
+	display: block;
 	max-width: 100% ;
-	width: auto ;
-	height: auto ;
+	margin-left: auto;
+	margin-right: auto;
 }
 input, select, button, textarea {
 	max-width: 100% ;
@@ -61,3 +62,20 @@ div#tswfooter {
 	margin-right: auto;
 	width: 50%;
   }
+  
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
