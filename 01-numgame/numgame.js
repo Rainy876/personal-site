@@ -4,10 +4,12 @@
 //  3. Put all other code inside functions
 const numField = document.getElementById("num-field");
 const messageText = document.getElementById("message-text");
+const guessesText = document.getElementById("guesses-text")
 
 let secret;
 let min = 1;
 let max = 139;
+let guesses = 10
 
 var myConfetti = confetti.create(null, {
     resize: true,
@@ -22,10 +24,15 @@ function loadGame() {
     secret = secret * (max-min+1);
     secret = secret + min;
     secret = Math.floor(secret);
+    guesses = 10 
+    guessesText.innerHTML = `You have ${guesses} guesses left`
 }
 
 function makeGuess() {
-    let guess = parseInt(numField.value)
+    let guess = parseInt(numField.value) 
+    guesses-- 
+    guessesText.innerHTML = `You have ${guesses} left`
+    console.log(`guesses: ${guesses}`)
     console.log(`Guess: ${guess}`);
     if (guess < secret) {
         messageText.innerHTML = `${guess} is too low!!!! get better loser`;
@@ -38,8 +45,15 @@ function makeGuess() {
             spread: 1000
 
         })
+        loadGame( {
+            
+        })
     } else {
         messageText.innerHTML = `Invalid guess`;
+    } 
+    if (guesses===0) {
+        alert(`You ran out of guesses!`)
+        loadGame()  
     }
     
 }
