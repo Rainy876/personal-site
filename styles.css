@@ -79,3 +79,7 @@ div#tswfooter {
   clear: both;
   display: table;
 }
+
+img#toucan {
+	display: none;
+}
