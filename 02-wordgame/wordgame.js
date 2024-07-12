@@ -37,8 +37,9 @@ function randomBackgroundColor() {
 // For checking word:  json.hasOwnProperty("programming")
 // For array of words: let arr = Object.keys(json)
 // For a random word:  let word = arr[randInt(0, arr.length - 1)];
-
+const guessField = document.getElementById("guess-field")
 const randomWord = document.getElementById("random-word")
+const feedbackText = document.getElementById("feedback-text")
 let allWords = [];
 let fiveLetterWords = [];
 let secret = '';
@@ -54,5 +55,27 @@ function wordsLoaded() {
     }
     
     randomIndex = randInt(0, fiveLetterWords.length-1);
-    secret = fiveLetterWords[randomIndex];
+    secret = fiveLetterWords[randomIndex].toLowerCase();
+}
+
+function changeGuess() {
+    let guess = guessField.value.toLowerCase();
+
+    // Skip if guess is less than 5 letters
+    if (guess.length < 5) return;
+
+    // Skip and empty input if guess is more than 5 letters
+    if (guess.length > 5) {
+        guessField.value = "";
+        return;
+    }
+    console.log(`Guess: "${guess}" and Secret: "${secret}"`);
+
+    // skip and empty input if guess is not a word
+    if (!json.hasOwnProperty(guess)) {
+        feedbackText.innerHTML = `"${guess}" is not a word. Try again.`
+        console.log(`this IS NOT a word!`);
+        guessField.value = "";
+        return;
+    }
 }
