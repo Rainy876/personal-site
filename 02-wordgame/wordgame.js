@@ -37,9 +37,9 @@ function randomBackgroundColor() {
 // For checking word:  json.hasOwnProperty("programming")
 // For array of words: let arr = Object.keys(json)
 // For a random word:  let word = arr[randInt(0, arr.length - 1)];
-const guessField = document.getElementById("guess-field")
-const randomWord = document.getElementById("random-word")
-const feedbackText = document.getElementById("feedback-text")
+const guessField = document.getElementById("guess-field");
+const randomWord = document.getElementById("random-word");
+const feedbackText = document.getElementById("feedback-text");
 let allWords = [];
 let fiveLetterWords = [];
 let secret = '';
@@ -73,9 +73,17 @@ function changeGuess() {
 
     // skip and empty input if guess is not a word
     if (!json.hasOwnProperty(guess)) {
-        feedbackText.innerHTML = `"${guess}" is not a word. Try again.`
-        console.log(`this IS NOT a word!`);
+        feedbackText.innerHTML += `"${guess}" is not a word. Try again.<br>`
         guessField.value = "";
         return;
     }
+
+    let correctPlacement = 0;
+    for (let i = 0; i < 5; i++) {
+        if (guess[i] == secret[i]) {
+            correctPlacement++;
+        }
+    }
+    feedbackText.innerHTML += `"${guess}" has ${correctPlacement} letter(s) in the correct place.<br>`
+    guessField.value = "";
 }
