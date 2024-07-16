@@ -1,0 +1,3 @@
+[submodule "clickgame"]
+	path = clickgame
+	url = https://github.com/Rainy876/clickgame.git
