@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pong Game</title>
+    <link rel="stylesheet" href="pong.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body style="background-color: #021bfd;">
+    <h3 style="background-color: #f7f3fd;"> <span style="color: #fd01f2;">This
+            is a pong game </span></h3>
+    <h1 id="title" style="background-color: #bdfdbd;"><span style="color: #e210fd;">PONG
+            GAME</span></h1>
+    <p>Press R for bigger paddle</p>
+    <canvas id="gameboard" width="500" height="500"></canvas>
+    <div id="scoreboard"><span style="color: #06e6fd;">0 : 0</span></div>
+    <u><i><b><button id="reset" onclick="resetGame()">RESET</button></b></i></u>
+    <div class="horizontal-center">
+        <div class="checkbox-label">
+            <input id="cpucheck" type="checkbox">
+            <label for="cpucheck">CPU</label>
+        </div>
+    </div> <img id="ball" style="visibility: hidden;" src="./images/taco-bell.png">
+    <img id="taco" style="visibility: hidden;" src="./images/Tacos-n.jpg">
+    <img id="taco_r" style="visibility: hidden;" src="./images/Tacos-n-r.jpg">
+    <script src="Ball.js"></script>
+    <script src="./conf.js"></script>
+    <script src="Paddle.js"></script>
+    <script src="pong.js"></script>
+    <script src="controls.js"></script>
+</body>
+
+</html>
